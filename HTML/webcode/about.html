@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/HTML/styles/about.css">
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+</head>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import { createStarField } from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id="default_about_page" class="about">
+        <div class="TopBox">
+            <div class="LogoGrid">
+                <img class="Logo"
+                     src="/resources/media/brain.svg">
+                <p class="SiteName">
+                    MIA
+                </p>
+            </div>
+            <p class="SiteNameMiddle">
+                Mock Interview Analyzer
+            </p>
+            <div id="profile_button_box">
+                <button class="profile_button">
+                    <img class="profile_image"
+                         src="/resources/media/profile_pic.svg">
+                    <p class="profile_text">
+                        profile
+                    </p>
+                </button>
+            </div>
+            <div id="AuthButtons">
+                <button class="js-loginButton">
+                    <img src="/resources/media/log-in.svg">
+                    <span class="login_text">Login</span>
+                </button>
+                <button class="js-SignInbutton">
+                    <img src="/resources/media/create.svg">
+                    <span class="SignIn_text">Sign Up</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <section id="AboutDetails">
+        <div class="AboutBox">
+            <h1 class="AboutHeading">
+                About MIA
+            </h1>
+            <ul class="AboutPoints">
+                <li>
+                    AI-powered mock interviews with detailed feedback.
+                </li>
+                <li>
+                    Real interview style conversations.
+                </li>
+                <li>
+                    Score every answer individually.
+                </li>
+                <li>
+                    Personalized strengths & weaknesses.
+                </li>
+                <li>
+                    Improved answers for every response.
+                </li>
+                <li>
+                    Complete interview summary and hiring verdict.
+                </li>
+                <li>
+                    Practice unlimited mock interviews.
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+<script type="module" src="/HTML/scripts/about.js"></script>

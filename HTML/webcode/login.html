@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<header>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="/HTML/styles/login.css">
+    <link rel="stylesheet" href="/HTML/styles/background.css">
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+</header>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import {createStarField} from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id = "LoginInPage" >
+        <div class="TopBox">
+            <div class="LogoGrid">
+                <img class="Logo"
+                     src="/resources/media/brain.svg">
+                <p class="SiteName">
+                    MIA
+                </p>
+            </div>
+            <p class="SiteNameMiddle">
+                Mock Interview Analyzer
+            </p>
+            <div class="AuthButtons">
+                <button class="js-SignInbutton">
+                    <img src="/resources/media/create.svg">
+                    <span class="SignIn_text">Sign Up</span>
+                </button>
+            </div>
+        </div>
+        <div class="DetailsBox">
+            <div id="emailbox">
+                <div class="SignInMotivationText">
+                    <h1 class="YM">Your Mock<br>Awaits You!</h1>
+                </div>
+                <div class="InputArea">
+                    <input id="EmailEnter"
+                        type="email"
+                        placeholder="Enter Email"
+                    >
+                    <button class="Econtinue">
+                        <img src="/resources/media/mail.svg" alt="Icon" width="20" height="20">
+                        Continue
+                    </button>
+                </div>
+                
+                <div class="OtherOptionBox">
+                    <a class="OtherSignUpOption">Sign-Up</a>
+                </div>
+                <div id="LoginEmailError" class="hidden">
+                    <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                    <p class="LogInErrorMessage">Email doesn't exist, Kindly Create one</p>
+                </div>
+                <div id="LoginEmailNullError" class="hidden">
+                    <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                    <p class="logInErrorNullMessage">Type Box Empty, Enter Something</p>
+                </div>
+            </div>
+            <div id="passwordbox" class="hidden">
+                <div class="passwordinput">
+                    <input  id="PassEnter"
+                        type="password"
+                        placeholder=" Enter Password"
+                    >
+                    <div id="LoginPasswordError" class="hidden">
+                        <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                        <p class="LogInErrorMessage">Wrong Password</p>
+                    </div>
+                    <div id="LoginPassNullError" class="hidden">
+                        <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                        <p class="logInErrorNullMessage">Type Box Empty, Enter Something</p>
+                    </div>
+                </div>     
+                <button id="Pcontinue">
+                        Continue
+                </button>     
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="/HTML/scripts/login.js"></script>
+

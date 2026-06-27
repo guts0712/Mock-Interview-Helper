@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<header>
+    <title>Mock</title>
+    
+    <link rel="stylesheet" href="/HTML/styles/mock.css">
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+</header>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import {createStarField} from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id="default_mock_page" >
+        <div class="TopBox">
+            <div class="LogoGrid">
+                <img class="Logo"
+                     src="/resources/media/brain.svg">
+                <p class="SiteName">
+                    MIA
+                </p>
+            </div>
+            <p class="SiteNameMiddle">
+                Mock Interview Analyzer
+            </p>
+            <div id="profile_button_box">
+                <button class="profile_button">
+                    <img class="profile_image"
+                         src="/resources/media/profile_pic.svg">
+                    <p class="profile_text">
+                        profile
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div id="MiddleMockSelectionBox" >
+            <div class="SelectionBox">
+                <div class="AllBoxes">
+                    <div class="JobSelection">
+                        <label for="job" class="JobRoleText">Job Role</label>
+                        <select id="job">
+                            <option value="">Select A Role</option>
+                            <option value="4">Frontend Developer</option>
+                            <option value="5">Backend Developer</option>
+                            <option value="1">AIML Engineer</option>
+                            <option value="3">cybersecurity</option>
+                            <option value="2">Cloud Computing</option>
+                            <option value="7">DBMS</option>
+                            <option value="9">Software Engineering</option>
+                            <option value="8">Operating System</option>
+                            <option value="6">DSA</option>
+                            <option value="10">Quantum Computing</option>
+                        </select>
+                    </div>
+                    <div class="TimeDurationSelection">
+                        <label for="Time" class="TimeDurationSelectionText">Time Duration</label>
+                        <select id="Time">
+                            <option value="">Select Time Duration</option>
+                            <option value="10">10 MINS</option>
+                            <option value="15">15 MINS</option>
+                            <option value="20">20 MINS</option>
+                            <option value="25">25 MINS</option>
+                            <option value="30">30 MINS</option>
+                        </select>
+                    </div>
+                    <div class="DifficultySelection">
+                        <label for="Difficulty" class="DifficultySelectionText">Difficulty</label>
+                        <select id="Difficulty">
+                            <option value="">Select Difficulty</option>
+                            <option value="B">Begineer</option>
+                            <option value="I">Intermediate</option>
+                            <option value="E">Expert</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ButtonBox">
+                    <button class="NextButton">Continue</button>
+                    <div id="Error" class="hidden">
+                        <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                        <p class="ErrorMessage">Please select everyoption</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="MiddleMockInterviewInstructions" class="hidden">
+            <div class="InstructionsBox">
+                <div class="InstructionsContent">
+                        <h1 class="InstructionTitle">
+                            Mock Interview Instructions
+                        </h1>
+                        <div class="InstructionSection">
+                            <h3>🎯 Objective</h3>
+                            <p>
+                                This mock interview is designed to simulate a real interview experience.
+                                Questions will be generated based on the role, difficulty level and
+                                duration selected by you.
+                            </p>
+                        </div>
+                        <div class="InstructionSection">
+                            <h3>🎤 During The Interview</h3>
+                            <ul>
+                                <li>Answer naturally as if speaking to a real interviewer.</li>
+                                <li>Explain your reasoning whenever possible.</li>
+                                <li>Use examples to support your answers.</li>
+                                <li>Avoid one-word or extremely short responses.</li>
+                            </ul>
+                        </div>
+                        <div class="InstructionSection">
+                            <h3>⏱ Time Management</h3>
+                            <ul>
+                                <li>Each question doesnt have dedicated timer.</li>
+                                <li>Try to organize your thoughts well.</li>
+                                <li>Clarity is more important than answer length.</li>
+                                <li>Submitted answers cannot be edited later.</li>
+                                <li>You can add more answers to it at your own risk of time.</li>
+                            </ul>
+                        </div>
+                        <div class="InstructionSection">
+                            <h3>📊 Evaluation Criteria</h3>
+                            <ul>
+                                <li>Technical Knowledge</li>
+                                <li>Communication Skills</li>
+                                <li>Depth Of Understanding</li>
+                                <li>Confidence And Clarity</li>
+                            </ul>
+                        </div>
+                        <div class="InstructionSection">
+                            <h3>⚠ Important Notes</h3>
+                            <ul>
+                                <li>Please use an computer or laptop rather mobile or small devices.</li>
+                                <li>Ensure your microphone is functioning correctly.</li>
+                                <li>Do not refresh or close the page during the mock.</li>
+                                <li>The quality of your feedback depends on the quality of your answers.</li>
+                                <li>As soon as you click continue the timer is gonna start for you, so be prepared.</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            <button class="InstructionsContinueButton">Continue</button>
+        </div>
+        <div id="MainMockMiddleBox" class="hidden">
+            <div class="MockQuestionContainer">
+                <div class="QuestionBox">
+                    <p class="Questions">Question</p>
+                </div>
+                <button class="SpeakButton">
+                    <img src="/resources/media/speaker.svg" alt="Speak">
+                </button>
+            </div>
+            <div class="TimeBoxContainer">
+                <div class="TimeBox">
+                    <p class="Time">20:00</p>
+                </div>
+            </div>
+            <div class="AnswerBoxContainer">
+                <div class="AnswerBox">
+                    <p class="Answers">Your Answer</p>
+                </div>
+                <button class="AddAnswerButton">Add Answer</button>
+            </div>
+            <div class="MockContinueBox">
+                <button class="MockContinueButton">Continue</button>
+            </div>
+        </div>
+    </div>
+    <div id="RecordingPopup" class="hidden">
+        <div class="RecordingPopupBox">
+            <div class="RecordingMic">
+                <img src="/resources/media/mic.svg" alt="mic" class="RecordingMicImage">
+            </div>
+            <h2 class="RecordingTitle">
+                Recording...
+            </h2>
+            <p class="RecordingSubtitle">
+                Speak your answer clearly
+            </p>
+            <button class="StopRecordingButton">
+                Stop Recording
+            </button>
+        </div>
+    </div>
+    <div id="ProcessingPopup" class="hidden">
+        <div class="ProcessingBox">
+            <div class="HourGlassContainer">
+                <img
+                    src="/resources/media/hourglass.svg"
+                    alt="Processing"
+                    class="HourGlass"
+                >
+            </div>
+            <h2 class="ProcessingTitle">
+                Processing Answer...
+            </h2>
+            <p class="ProcessingText">
+                Converting speech to text and analyzing your response.
+                Please wait a moment.
+            </p>
+        </div>
+
+    </div>
+</body>
+<script type="module" src="/HTML/scripts/mock.js"></script>

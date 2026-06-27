@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="/HTML/styles/dashboard.css">
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+</head>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import {createStarField} from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id="DashboardPage">
+        <div class="TopBox">
+            <div class="LogoGrid">
+                <img class="Logo"
+                     src="/resources/media/brain.svg">
+                <p class="SiteName">
+                    MIA
+                </p>
+            </div>
+            <p class="SiteNameMiddle">
+                Mock Interview Analyzer
+            </p>
+            <div id="profile_button_box">
+                <button class="profile_button">
+                    <img class="profile_image"
+                         src="/resources/media/profile_pic.svg">
+                    <p class="profile_text">
+                        profile
+                    </p>
+                </button>
+            </div>
+        </div>
+        <div id="DashboardContainer">
+            <div class="DashboardHeader">
+                <h1 class="WelcomeMessage">
+                    Welcome back,
+                    <span id="UserName">Amogh</span>.
+                </h1>
+                <p class="WelcomeSubMessage">
+                    Track your interview progress, review your previous performances
+                    and continue becoming a better candidate.
+                </p>
+            </div>
+
+            <div class="DashboardStats">
+                <div class="StatCard">
+                    <p class="StatTitle">
+                        Total Mocks
+                    </p>
+                    <h2 class="StatNumber NoOfMocks">
+                        12
+                    </h2>
+                </div>
+                <div class="StatCard">
+                    <p class="StatTitle">
+                        Average Rating
+                    </p>
+                    <h2 class="StatNumber AvgScore">
+                        87
+                    </h2>
+                </div>
+                <div class="StatCard_latest">
+                    <p class="StatTitle">
+                        Latest Mock
+                    </p>
+                    <h2 class="StatNumber RecentMock">
+                        91
+                    </h2>
+                </div>
+            </div>
+            <div class="DashboardBottom">
+                <div>
+                    <h2 class="BottomHeading">
+                        Ready for another interview?
+                    </h2>
+                    <p class="BottomDescription">
+                        Practice another mock interview and keep improving.
+                    </p>
+                </div>
+                <button class="MockButton">
+                    Start Mock
+                </button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/HTML/scripts/dashboard.js"></script>
+</body>
+</html>

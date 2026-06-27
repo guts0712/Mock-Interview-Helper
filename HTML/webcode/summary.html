@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<header>
+    <title>DashBoard</title>
+    
+    <link rel="stylesheet" href="/HTML/styles/summary.css">
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/HTML/styles/background.css">
+</header>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import {createStarField} from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id="DefaultSummaryPage">
+        <div class="userCreation">
+            <div class="LogoGrid">
+                <img class="Logo" src="/resources/media/brain.svg">
+                <p class="SiteName">MIA</p>
+            </div>
+            <div class="NavbarTitle">
+                Mock Interview Analyzer
+            </div>
+            <div id="profile_button_box" >
+                <button class="profile_button">
+                    <img class="profile_image" src="/resources/media/profile_pic.svg" alt="profile_icon">
+                    <p class="profile_text">profile</p>
+                </button>
+            </div>
+        </div>
+        <div id="SummaryContainer">
+            <section id="RatingSection">
+                <h1 class="SectionHeading">
+                    Interview Rating
+                </h1>
+
+                <div id="RatingBox">
+
+                    <div class="ScoreCircle">
+
+                        <span class="ScoreNumber">
+                            --
+                        </span>
+
+                    </div>
+
+                    <p class="ScoreLabel">
+                        Overall Performance Score
+                    </p>
+
+                </div>
+                <button class="ContinueButton">
+                    Continue
+                </button>
+            </section>
+            <section id="QuestionSection" class="hidden">
+
+                <h1 class="SectionHeading">
+                    Questions & Answers
+                </h1>
+
+                <div id="QuestionContainer">
+
+                </div>
+
+                <button class="ContinueButton">
+                    Continue
+                </button>
+
+            </section>
+            <section id="InsightSection" class="hidden">
+
+                <h1 class="SectionHeading">
+                    Interview Summary
+                </h1>
+
+                <div id="InsightContainer">
+
+                </div>
+
+                <button class="ContinueButton">
+                    Continue
+                </button>
+
+            </section>
+            <section id="VerdictSection" class="hidden">
+
+                <h1 class="SectionHeading">
+                    Final Verdict
+                </h1>
+
+                <div id="VerdictContainer">
+
+                </div>
+
+                <button class="ContinueButton">
+                    Give Another Mock
+                </button>
+
+            </section>
+        </div>
+    </div>
+</body>
+<script type="module" src="/HTML/scripts/summary.js"></script>

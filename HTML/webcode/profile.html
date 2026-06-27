@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/HTML/styles/profile.css">
+    <link rel="icon"
+          href="/resources/media/brain.svg"
+          type="image/svg+xml">
+</head>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import { createStarField } from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id="default_profile_page">
+        <div class="TopBox">
+            <div class="LogoGrid">
+                <img class="Logo"
+                     src="/resources/media/brain.svg">
+                <p class="SiteName">
+                    MIA
+                </p>
+            </div>
+            <p class="SiteNameMiddle">
+                Mock Interview Analyzer
+            </p>
+            <div id="profile_button_box">
+                <button class="profile_button">
+                    <img class="profile_image"
+                         src="/resources/media/profile_pic.svg">
+                    <p class="profile_text">
+                        profile
+                    </p>
+                </button>
+            </div>
+        </div>
+        <section id="ProfileStart">
+            <div class="UserName">
+                <p class="UserWelcomeMessage">
+                    Hi, {USER} !
+                </p>
+                <p class="WelcomeSubText">
+                    Welcome back.
+                </p>
+            </div>
+            <div class="Headers">
+                <button id="MocksButton"
+                        class="HeaderCard">
+                    <h2>Your Mocks</h2>
+                    <p>
+                        View every interview you've completed.
+                    </p>
+                </button>
+                <button id="RecentMockButton" class="HeaderCard">
+                    <h2>Recent Mock</h2>
+                    <p>
+                        Learn About Your Recent Interview.
+                    </p>
+                </button>
+                <button id="StartMockButton" class="HeaderCard PrimaryHeader">
+                    <h2>Give A Mock</h2>
+                    <p>
+                        Start a brand new interview.
+                    </p>
+                </button>
+                <button id="AboutButton" class="HeaderCard">
+                    <h2>About</h2>
+                    <p>
+                        Learn more about MIA.
+                    </p>
+                </button>
+                <button id="Logout" class="logOutButton">LogOut</button>
+            </div>
+        </section>
+        <section id="ProfileMocks" class="hidden">
+            <div class="SectionTop">
+                <button class="BackButton">
+                    ← Back
+                </button>
+                <h1>
+                    Your Mock History
+                </h1>
+            </div>
+            <div id="MockHistoryContainer">
+                <!--
+
+                    JS APPENDS CARDS HERE
+
+                -->
+
+                <!-- Example -->
+
+                <!--
+
+                <div class="MockCard">
+
+                    <div class="MockInfo">
+
+                        <h2>
+
+                            Frontend Developer
+
+                        </h2>
+
+                        <p>
+
+                            25 June 2026
+
+                        </p>
+
+                    </div>
+
+                    <div class="MockScore">
+
+                        <span class="ScoreNumberMini">
+                             91
+                        </span>
+
+                    </div>
+
+                </div>
+
+                -->
+            </div>
+        </section>
+    </div>
+</body>
+<script type="module" src="/HTML/scripts/profile.js" ></script>
+</html>

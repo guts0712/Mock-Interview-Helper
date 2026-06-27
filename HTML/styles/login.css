@@ -1,0 +1,225 @@
+#LoginInPage{
+    animation-name: fade;
+    animation-timing-function: ease-in;
+	animation-duration: 1s;
+    opacity: 1;
+}
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url("../../resources/fonts/Montserrat/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+#passwordbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    animation-name: fade;
+    animation-timing-function: ease-in;
+	animation-duration: 1s;
+    opacity: 1;
+}
+.passwordinput{
+    margin-top: 55px;
+    width:70%;
+}
+.passwordinput input{
+    width:100%;
+    margin-bottom:15px;
+    height:55px;
+    background:none;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px;
+    color:white;
+    box-sizing:border-box;
+}
+#passwordbox button{
+    display: flex;
+    align-items: center;       
+    justify-content: center;
+    width:70%;
+    height:55px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:600;
+}
+#LoginPasswordError{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width:70%;
+    margin-bottom:15px;
+}
+
+.hidden{
+    display: none !important;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.TopBox{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 40px;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.04);
+    font-family: 'MyCustomFont';
+    z-index:1000;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.SiteNameMiddle{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:18px;
+    letter-spacing:3px;
+    color:rgba(255,255,255,.72);
+    text-transform:uppercase;
+    font-family: 'MyCustomFont';
+}
+.LogoGrid{
+    display:flex;
+    align-items:center;
+    gap:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 7px;
+}
+
+.Logo{
+    height:60px;
+    width:60px;
+}
+
+.SiteName{
+    color: white;
+    font-family: 'MyCustomFont';
+}
+
+.DetailsBox{
+    background-color: rgba(22, 35, 48, 0.21);
+    position: absolute;
+    left: 33%;
+    top: 27%;
+    width: 550px;
+    height: 416px;
+    border :2px solid #ffffff1b;
+    border-radius: 20px
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.OtherOptionBox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 20px;
+}
+.InputArea button{
+    display: flex;
+    align-items: center;       
+    justify-content: center;
+    width:70%;
+    height:55px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:600;
+    margin-left: 85px;
+}
+.InputArea input{
+    width:70%;
+    height:55px;
+    margin-top:40px;
+    background:none;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px;
+    color:white;
+    margin-left: 85px;
+    padding-left:15px;
+    box-sizing:border-box;
+}
+.YM{
+    color:white;
+    font-size:48px;
+    margin:0;
+    line-height:1.1;
+    margin-left: 125px;
+    margin-top: 30px;
+    font-family: 'MyCustomFont';
+}
+.OtherSignUpOption{
+    color: white;
+    display:inline-block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'MyCustomFont';
+    cursor: pointer;
+}
+.LogInErrorMessage, .logInErrorNullMessage{
+    font-family: 'MyCustomFont';
+    margin-left: 6px;
+    font-size: 16px;
+    color: #790101;
+}
+#LoginEmailError, #LoginEmailNullError, #LoginPassNullError{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.js-SignInbutton{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:none;
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.js-SignInbutton:hover{
+    transform:translateY(-2px);
+    opacity:.8;
+}
+
+.SignIn_text{
+    color:white;
+    font-size:16px;
+    font-family:'MyCustomFont';
+}
+.AuthButtons{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}

@@ -1,0 +1,449 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url("../../resources/fonts/Montserrat/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    margin: 0px;
+    overflow-x: hidden;
+    background: #000000;
+    animation-name: fade;
+    animation-timing-function: ease-in;
+	animation-duration: 1s;
+    opacity: 1;
+    font-family:'MyCustomFont', sans-serif
+}
+
+#StarCanvas{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+
+.TopBox{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 40px;
+
+    position:sticky;
+    top:0;
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+
+    z-index:1000;
+
+}
+
+.hidden{
+    display: none !important;
+}
+
+.SiteNameMiddle{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    color:rgba(255,255,255,.72);
+
+    text-transform:uppercase;
+
+}
+.LogoGrid{
+    display:flex;
+    align-items:center;
+    gap:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 7px;
+}
+
+.Logo{
+    height:60px;
+    width:60px;
+}
+
+.SiteName{
+    color: white;
+    font-family: 'MyCustomFont';
+}
+
+
+.profile_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#profile_button_box{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 12px;
+}
+.profile_image{
+    width: 60px;
+    height: 60px;
+}
+.profile_text{
+    font-family: 'MyCustomFont';
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+
+.MiddleBox, .Box1, .Box2, .Box3{
+    display: flex;
+    flex-direction: column;
+}
+.MiddleBox{
+    margin-left:60px;
+    margin-right:60px;
+    margin-top:40px;
+}
+.WelcomeMessage{
+    color: white;
+    font-family: 'MyCustomFont';
+    font-size: 38px;
+    margin: 0;
+}
+.WelcomeMessageBox{
+    display: inline-block;
+    margin-top:40px;
+}
+
+.UserMockDetailsBox{
+    display: flex;
+    gap:80px;
+    margin-top:80px;
+}
+.MocksBox, .AvgScoreBox, .RecentMockBox{
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    transition: 0.3s;
+    width:330px;
+    height:220px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.MocksBox:hover,
+.AvgScoreBox:hover,
+.RecentMockBox:hover{
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.4);
+}
+
+.MocksBox{
+    border-left:4px solid wheat;
+}
+
+.AvgScoreBox{
+    border-left:4px solid wheat;
+}
+
+.RecentMockBox{
+    border-left:4px solid wheat;
+}
+
+.NoOfMocks, .AvgScore, .RecentMock{
+    color: white;
+    font-family: 'MyCustomFont';
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+.Box1Message, .Box2Message, .Box3Message{
+    font-family: 'MyCustomFont';
+    font-size: 20px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 10px;
+    padding-left: 30px;
+}
+
+.BottomBox{
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.BottomMessage{
+    color: white;
+    font-family: "MyCustomFont";
+    font-size: 28px;
+}
+.MockButton{
+    background:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:14px 30px;
+    font-size:18px;
+    font-family:'MyCustomFont';
+    transition:.3s;
+    cursor: pointer;
+}
+.MockButton:hover{
+    transform:translateY(-2px);
+}
+
+
+#DashboardContainer{
+
+    width:min(1100px,90vw);
+
+    margin:30px auto 30px;
+
+    padding:40px;
+
+    border-radius:34px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    backdrop-filter:blur(28px);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 90px rgba(0,0,0,.45);
+
+}
+
+#DashboardContainer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    right:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.04),
+    transparent 70%);
+
+    filter:blur(50px);
+
+}
+
+.DashboardHeader{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.WelcomeMessage{
+
+    color:white;
+
+    font-size:58px;
+
+    margin:0;
+
+    font-weight:800;
+
+}
+
+#UserName{
+
+    color:white;
+
+}
+
+.WelcomeSubMessage{
+
+    width:720px;
+
+    max-width:90%;
+
+    margin:25px auto 0;
+
+    color:rgba(255,255,255,.58);
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+.DashboardStats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    margin-bottom:50px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.StatCard, .StatCard_latest{
+
+    flex:1;
+
+    min-height:220px;
+
+    border-radius:26px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+
+.StatCard:hover, .StatCard_latest:hover{
+
+    transform:translateY(-6px);
+
+    border-color:
+    rgba(255,255,255,.12);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.StatTitle{
+
+    color:rgba(255,255,255,.5);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+    margin:0;
+
+}
+
+.StatNumber{
+    margin-top:20px;
+    margin-bottom:0;
+    font-size:90px;
+    color:white;
+    font-weight:800;
+}
+
+.DashboardBottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px;
+    border-radius:24px;
+    background:
+    rgba(255,255,255,.02);
+    border:
+    1px solid rgba(255,255,255,.05);
+    position:relative;
+    z-index:2;
+}
+
+.BottomHeading{
+    color:white;
+    font-size:32px;
+    margin:0;
+}
+
+.BottomDescription{
+    color:rgba(255,255,255,.55);
+    margin-top:12px;
+    font-size:17px;
+}
+
+.MockButton{
+    border:none;
+    border-radius:18px;
+    background:rgba(255, 255, 255, 0.858);
+    color:black;
+    padding:18px 42px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.MockButton:hover{
+    transform:translateY(-4px);
+    box-shadow:
+    0 0 30px rgba(255,255,255,.15);
+}

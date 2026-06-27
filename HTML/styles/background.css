@@ -1,0 +1,15 @@
+body{
+    margin:0;
+    overflow-x:hidden;
+    background:#000000;
+}
+
+
+
+#StarCanvas{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+}

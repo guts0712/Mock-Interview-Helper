@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url("../../resources/fonts/Montserrat/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+body{
+    margin:0;
+    overflow:hidden;
+    font-family:'MyCustomFont', sans-serif;
+    background:#000000;
+    animation-name: fade;
+    animation-timing-function: ease-in;
+	animation-duration: 1s;
+    opacity: 1;
+}
+#default_profile_page{
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+#StarCanvas{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+.TopBox{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 40px;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.04);
+    z-index:1000;
+}
+.SiteNameMiddle{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:18px;
+    letter-spacing:3px;
+    color:rgba(255,255,255,.72);
+    text-transform:uppercase;
+}
+.LogoGrid{
+    display:flex;
+    align-items:center;
+    gap:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 7px;
+}
+.Logo{
+    height:60px;
+    width:60px;
+}
+.SiteName{
+    color: white;
+    font-family: 'MyCustomFont';
+}
+.profile_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#profile_button_box{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 12px;
+}
+.profile_image{
+    width: 60px;
+    height: 60px;
+}
+.profile_text{
+    font-family: 'MyCustomFont';
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+
+#AboutDetails{
+    width:min(1050px,90vw);
+    margin:40px auto 80px;
+    display:flex;
+    justify-content:center;
+}
+.AboutBox{
+    width:100%;
+    padding:60px;
+    border-radius:34px;
+    background:
+    rgba(255,255,255,.025);
+    backdrop-filter:blur(28px);
+    border:
+    1px solid rgba(255,255,255,.08);
+    box-shadow:
+    0 25px 90px rgba(0,0,0,.45);
+    position:relative;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.AboutBox::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    top:-250px;
+    right:-250px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.04),
+        transparent 70%
+    );
+    filter:blur(50px);
+}
+.AboutBox:hover{
+    transform:translateY(-4px);
+    border-color:
+    rgba(255,255,255,.12);
+    box-shadow:
+    0 35px 100px rgba(0,0,0,.55);
+}
+.AboutHeading{
+    margin:0;
+    margin-bottom:45px;
+    text-align:center;
+    color:white;
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:-2px;
+    position:relative;
+    z-index:2;
+}
+.AboutPoints{
+    margin:0;
+    padding-left:35px;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    position:relative;
+    z-index:2;
+}
+.AboutPoints li{
+    color:
+    rgba(255,255,255,.82);
+    font-size:20px;
+    line-height:1.9;
+    letter-spacing:.3px;
+}
+.AboutPoints li::marker{
+    color:white;
+    font-size:1.2em;
+}
+#AuthButtons{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    gap:24px;
+}
+.js-loginButton,
+.js-SignInbutton{
+    display:flex;
+    align-items:center;
+    justify-self: flex-start;
+    gap:8px;
+    background:none;
+    border:none;
+    font-family: 'MyCustomFont';
+    cursor:pointer;
+    color:white;
+    transition:.3s;
+}
+
+.js-loginButton:hover,
+.js-SignInbutton:hover{
+    transform:translateY(-2px);
+    opacity:.8;
+}
+.hidden{
+    display: none !important;
+}

@@ -1,0 +1,516 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url("../../resources/fonts/Montserrat/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    margin: 0px;
+    background-color: #020204;
+    overflow-x: hidden;
+    font-family: 'MyCustomFont';
+}
+
+#StarCanvas{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.hidden{
+    display: none !important;
+}
+#default_mock_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation-name: fade;
+    animation-timing-function: ease-in;
+	animation-duration: 1s;
+    opacity: 1;
+
+}
+.TopBox{
+
+    display:flex;
+    width:100%;
+    box-sizing:border-box;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 40px;
+
+    position:sticky;
+    top:0;
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+
+    z-index:1000;
+
+}
+
+.hidden{
+    display: none !important;
+}
+
+.SiteNameMiddle{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    color:rgba(255,255,255,.72);
+
+    text-transform:uppercase;
+
+}
+.LogoGrid{
+    display:flex;
+    align-items:center;
+    gap:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 7px;
+}
+
+.Logo{
+    height:60px;
+    width:60px;
+}
+
+.SiteName{
+    color: white;
+    font-family: 'MyCustomFont';
+}
+
+
+.profile_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#profile_button_box{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 12px;
+}
+
+.profile_image{
+    width: 60px;
+    height: 60px;
+}
+.profile_text{
+    font-family: 'MyCustomFont';
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+
+#MiddleMockSelectionBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+    
+}
+.SelectionBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(22, 35, 48, 0.21);
+    width: 1200px;
+    height: 500px;
+    border :2px solid #ffffff1b;
+    border-radius: 20px;
+    gap: 65px;
+}
+.AllBoxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+
+
+.JobSelection, .TimeDurationSelection, .DifficultySelection{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 20%;
+}
+#job, #Difficulty, #Time{
+    width:250px;
+    padding:12px;
+    background:#111827;
+    color:white;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    font-size:16px;
+    font-family: 'MyCustomFont'
+}
+.JobRoleText, .TimeDurationSelectionText, .DifficultySelectionText{
+    color: white;
+    font-family: 'MyCustomFont'
+}
+.NextButton, .InstructionsContinueButton{
+    background-color: beige;
+    color: black;
+    border:none;
+    border-radius:12px;
+    padding:14px 30px;
+    font-size:18px;
+    transition:.3s;
+    cursor: pointer;
+}
+.NextButton:hover, .InstructionsContinueButton:hover, .SpeakButton:hover, .AddAnswerButton:hover, .MockContinueButton:hover{
+    transform:translateY(-2px);
+}
+
+.ButtonBox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#Error{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width:70%;
+    margin-bottom:15px;
+}
+.ErrorMessage{
+    font-family: 'MyCustomFont';
+    margin-left: 6px;
+    font-size: 10px;
+    color: #790101;
+}
+#MiddleMockInterviewInstructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    gap: 14px;
+}
+.InstructionsBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(22, 35, 48, 0.21);
+    width: 1200px;
+    height: 700px;
+    border :2px solid #ffffff1b;
+    border-radius: 20px;
+    gap: 14px;
+    justify-content:flex-start;
+    overflow-y:auto;
+}
+
+.InstructionsContent{
+    width:90%;
+    height:90%;
+    color:white;
+    font-family:'MyCustomFont';
+    overflow-y:auto;
+    padding:25px;
+}
+
+.InstructionTitle{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+    font-weight:700;
+}
+
+.InstructionSection{
+    margin-bottom:25px;
+}
+
+.InstructionSection h3{
+    margin-bottom:10px;
+    font-size:22px;
+    color:#f3f4f6;
+}
+
+.InstructionSection p{
+    margin:0;
+    line-height:1.7;
+    color:rgba(255,255,255,0.75);
+}
+
+.InstructionSection ul{
+    margin:0;
+    padding-left:22px;
+}
+
+.InstructionSection li{
+    margin-bottom:8px;
+    color:rgba(255,255,255,0.75);
+    line-height:1.6;
+}
+
+#MainMockMiddleBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.MockQuestionContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    gap: 35px;
+    margin-left: 5%;
+}
+.QuestionBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(22, 35, 48, 0.21);
+    width: 900px;
+    height: 200px;
+    border :2px solid #ffffff1b;
+    border-radius: 20px;
+    gap: 65px;
+}
+.SpeakButton{
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+.Questions{
+    font-family: 'MyCustomFont';
+    color: white;
+    font-size: 20px;
+}
+.TimeBoxContainer{
+    display: flex;
+    align-items: center;
+}
+.TimeBox{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(30, 47, 65, 0.21);
+    width: 75px;
+    height: 50px;
+    border :2px solid #ffffff1b;
+    border-radius: 20px;
+}
+.Time{
+    font-family: 'MyCustomFont';
+    color: white;
+    font-size: 15px;
+}
+.AnswerBoxContainer, .MockContinueBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.AnswerBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(22, 35, 48, 0.21);
+    width: 1500px;
+    height: 300px;
+    border :2px solid #ffffff1b;
+    border-radius: 20px;
+}
+.Answers{
+    font-family: 'MyCustomFont';
+    color: white;
+    font-size: 20px;
+}
+.AddAnswerButton{
+    background-color: rgba(245, 245, 220, 0.671);
+    color: black;
+    border:none;
+    border-radius:6px;
+    padding:10px 20px;
+    font-size:15px;
+    transition:.3s;
+    cursor: pointer;
+    gap: 20px;
+}
+.MockContinueButton{
+    background-color: beige;
+    color: black;
+    border:none;
+    border-radius:12px;
+    padding:14px 30px;
+    font-size:18px;
+    transition:.3s;
+    cursor: pointer;
+}
+#RecordingPopup{
+    position: fixed;
+    inset: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: rgba(0,0,0,0.75);
+    z-index:9999;
+}
+.RecordingPopupBox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:400px;
+    height:300px;
+    background-color: rgba(22,35,48,0.95);
+    border:2px solid #ffffff1b;
+    border-radius:20px;
+    gap:18px;
+}
+.RecordingMic{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background-color:#991b1b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation:pulse 1.2s infinite;
+}
+.RecordingMicImage{
+    width:42px;
+    height:42px;
+}
+.RecordingTitle{
+    margin:0;
+    color:white;
+    font-family:'MyCustomFont';
+}
+
+.RecordingSubtitle{
+    margin:0;
+    color:rgba(255,255,255,0.75);
+    font-family:'MyCustomFont';
+}
+.StopRecordingButton{
+    background-color:beige;
+    border:none;
+    border-radius:12px;
+    padding:12px 24px;
+    cursor:pointer;
+    font-family:'MyCustomFont';
+    transition:.3s;
+}
+.StopRecordingButton:hover{
+    transform:translateY(-2px);
+}
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+#ProcessingPopup{
+    position: fixed;
+    inset: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: rgba(0,0,0,0.75);
+    z-index:9999;
+}
+.ProcessingBox{
+    width:420px;
+    height:320px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    background: rgba(22,35,48,0.75);
+    border:2px solid rgba(255,255,255,0.1);
+    border-radius:24px;
+    backdrop-filter: blur(12px);
+    animation:ProcessingFade .4s ease;
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.35),
+        0 0 50px rgba(59,130,246,0.12);
+}
+.HourGlassContainer{
+    width:100px;
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.HourGlass{
+    width:80px;
+    height:80px;
+    animation:HourGlassRotate 2s ease-in-out infinite;
+}
+.ProcessingTitle{
+    margin:0;
+    color:white;
+    font-family:'MyCustomFont';
+    font-size:28px;
+    font-weight:700;
+}
+.ProcessingText{
+    width:80%;
+    margin:0;
+    text-align:center;
+    color:rgba(255,255,255,0.75);
+    line-height:1.7;
+    font-family:'MyCustomFont';
+}
+@keyframes ProcessingFade{
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+@keyframes HourGlassRotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    40%{
+        transform:rotate(180deg);
+    }
+    60%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}

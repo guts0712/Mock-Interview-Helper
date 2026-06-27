@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<header>
+    <title>Create User</title>
+    <link rel="stylesheet" href="/HTML/styles/signup.css">
+    <link rel="stylesheet" href="/HTML/styles/background.css">
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+</header>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import {createStarField} from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id = "SignInPage">
+        <div class="TopBox">
+            <div class="LogoGrid">
+                <img class="Logo"
+                     src="/resources/media/brain.svg">
+                <p class="SiteName">
+                    MIA
+                </p>
+            </div>
+            <p class="SiteNameMiddle">
+                Mock Interview Analyzer
+            </p>
+            <div class="AuthButtons">
+                <button class="js-loginButton">
+                    <img src="/resources/media/log-in.svg">
+                    <span class="login_text">Login</span>
+                </button>
+            </div>
+        </div>
+        <div class="DetailsBox">
+            <div id="Emailbox" >
+                <div class="SignInMotivationText">
+                    <h1 class="YM">Your Mock<br>On The Way!</h1>
+                </div>
+                <div class="InputArea">
+                    <input id="emailInput" 
+                        type="email"
+                        placeholder="Enter Email"
+                    >
+                    <button class="Econtinue">
+                        <img src="/resources/media/mail.svg" alt="Icon" width="20" height="20">
+                        Continue
+                    </button>
+                </div>
+                <div class="OtherOptionBox">
+                    <a class="OtherLoginOption">Login</a>
+                </div>
+                <div id="SigninEmailError" class="hidden">
+                    <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                    <p class="SignInErrorMessage">Email already exist, Kindly login</p>
+                </div>
+                <div id="SigninEmailNullError" class="hidden">
+                    <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                    <p class="SignInErrorNullMessage">Type Box Empty, Enter Something</p>
+                </div>
+            </div>
+            <div id="passwordbox" class="hidden">
+                <div class="passwordinput">
+                    <input id="Fpassword"
+                        type="password"
+                        placeholder=" Enter Password"
+                    >
+                    <input id="Rpassword"
+                        type="password"
+                        placeholder=" Re-Enter Password"
+                    >
+                    <div id="SignUpPasswordError" class="hidden">
+                        <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                        <p class="SignUpErrorMessage">Password Are Not same</p>
+                    </div>
+                    <div id="SigninPassNullError" class="hidden">
+                        <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                        <p class="SignInErrorNullMessage">Type Box Empty, Enter Something</p>
+                    </div>
+                </div>     
+                <button class="Pcontinue">
+                        Continue
+                </button>
+            </div>
+            <div id = "NameBox" class="hidden">
+                <div class="NameInput">
+                    <input id="Name"
+                        type ="text"
+                        placeholder=" Enter Your Name"
+                    >
+                </div>
+                <div id="SigninNameNullError" class="hidden">
+                    <img src="/resources/media/alert.svg" alt="Error" width="20" height="20">
+                    <p class="SignInErrorNullMessage">Type Box Empty, Enter Something</p>
+                </div>
+                <button class="Ncontinue">
+                        Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/HTML/scripts/signup.js"></script>
+

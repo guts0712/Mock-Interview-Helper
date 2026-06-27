@@ -1,0 +1,520 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url("../../resources/fonts/Montserrat/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+body{
+    margin:0;
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    font-family:'MyCustomFont', sans-serif;
+    color:white;
+}
+
+
+
+#DefaultSummaryPage{
+    animation-name: fade;
+    animation-timing-function: ease-in;
+	animation-duration: 1s;
+    opacity: 1;
+}
+.userCreation{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 40px;
+    position:sticky;
+    top:0;
+    background: none;
+    backdrop-filter:blur(20px);
+    border-bottom:
+    1px solid rgba(255,255,255,.04);
+    z-index:1000;
+}
+.Logo{
+    width:58px;
+    height:58px;
+}
+
+.SiteName{
+    font-size:24px;
+    color:white;
+    font-family:'MyCustomFont';
+}
+.LogoGrid{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.NavbarTitle{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    color:
+    rgba(255,255,255,.8);
+    font-family:'MyCustomFont';
+    font-size:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+.profile_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#profile_button_box{
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 12px;
+}
+
+.profile_image{
+    width: 60px;
+    height: 60px;
+}
+.profile_text{
+    font-family: 'MyCustomFont';
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+
+#SummaryContainer{
+
+    width:min(1200px,90vw);
+
+    margin:40px auto;
+    padding-bottom:40px;
+}
+
+#SummaryContainer section{
+
+    width:100%;
+}
+
+#RatingSection,
+#QuestionSection,
+#InsightSection,
+#VerdictSection{
+
+    background:
+    rgba(255,255,255,.02);
+
+    backdrop-filter:
+    blur(25px);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:32px;
+    min-height: min(700px, calc(100vh - 190px));
+    max-height: calc(100vh - 190px);
+    padding:50px;
+
+    position:relative;
+    box-sizing: border-box;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:
+    0 20px 80px rgba(0,0,0,.45);
+}
+
+
+
+#RatingSection::before,
+#QuestionSection::before,
+#InsightSection::before,
+#VerdictSection::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    top:-250px;
+    right:-250px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.04),
+        transparent 70%
+    );
+
+    filter:blur(50px);
+}
+
+#RatingBox{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex:1;
+    min-height:0;
+}
+
+.ScoreCircle{
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.01)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 60px rgba(255,255,255,.05);
+}
+
+.ScoreNumber{
+
+    font-size:130px;
+
+    color:white;
+
+    font-weight:900;
+
+    line-height:1;
+
+    font-family:'MyCustomFont';
+}
+
+.ScoreLabel{
+
+    margin-top:30px;
+
+    color:
+    rgba(255,255,255,.55);
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+#QuestionContainer{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding-right:12px;
+
+    min-height:0;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(255,255,255,.45) rgba(255,255,255,.08);
+}
+
+#QuestionContainer::-webkit-scrollbar,
+#InsightContainer::-webkit-scrollbar{
+    width:8px;
+}
+
+#QuestionContainer::-webkit-scrollbar-track,
+#InsightContainer::-webkit-scrollbar-track{
+    background:rgba(255,255,255,.08);
+    border-radius:99px;
+}
+
+#QuestionContainer::-webkit-scrollbar-thumb,
+#InsightContainer::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.45);
+    border-radius:99px;
+}
+
+.QuestionCard{
+
+    margin-bottom:30px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+    font-family:'MyCustomFont', sans-serif;
+}
+
+.QuestionTitle{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+    font-family:'MyCustomFont', sans-serif;
+}
+
+.QuestionLabel{
+
+    color:
+    rgba(255,255,255,.5);
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+    font-family:'MyCustomFont', sans-serif;
+}
+
+.QuestionContent{
+
+    color:rgba(255,255,255,.82);
+
+    margin-top:10px;
+
+    line-height:1.8;
+    font-family:'MyCustomFont', sans-serif;
+    overflow-wrap:anywhere;
+}
+#InsightContainer{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    min-height:0;
+    padding-right:12px;
+    color:rgba(255,255,255,.82);
+    line-height:1.8;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(255,255,255,.45) rgba(255,255,255,.08);
+}
+
+.InsightCard{
+
+    margin-bottom:24px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:
+    rgba(255,255,255,.025);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+}
+
+.InsightTitle{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+
+.InsightText{
+
+    color:
+    rgba(255,255,255,.72);
+
+    line-height:1.9;
+}
+
+#VerdictContainer{
+
+    flex:1;
+    min-height:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.VerdictTitle{
+
+    color:
+    rgba(255,255,255,.55);
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+.VerdictResult{
+
+    font-size:120px;
+
+    color:white;
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    margin:0;
+}
+
+.VerdictDescription{
+
+    width:700px;
+
+    max-width:90%;
+
+    color:
+    rgba(255,255,255,.7);
+
+    line-height:1.8;
+
+    margin-top:25px;
+}
+
+.ContinueButton{
+
+    align-self:center;
+    flex-shrink:0;
+    margin-top:28px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    color:black;
+
+    font-size:16px;
+
+    font-weight:700;
+    font-family:'MyCustomFont', sans-serif;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.ContinueButton:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.15);
+}
+
+.SectionHeading{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:58px;
+
+    font-family:'MyCustomFont';
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    margin-bottom:50px;
+    flex-shrink:0;
+
+    text-shadow:
+    0 0 25px rgba(255,255,255,.08);
+}
+
+
+.hidden{
+    display: none !important;
+}
+
+@media (max-width: 700px){
+    .userCreation{
+        padding:14px 18px;
+    }
+
+    .NavbarTitle{
+        display:none;
+    }
+
+    #SummaryContainer{
+        width:min(94vw,1200px);
+        margin:24px auto;
+    }
+
+    #RatingSection,
+    #QuestionSection,
+    #InsightSection,
+    #VerdictSection{
+        max-height:calc(100vh - 150px);
+        min-height:calc(100vh - 150px);
+        padding:28px 22px;
+        border-radius:24px;
+    }
+
+    .SectionHeading{
+        font-size:38px;
+        letter-spacing:0;
+        margin-bottom:32px;
+    }
+
+    .QuestionCard,
+    .InsightCard{
+        padding:22px;
+        border-radius:18px;
+    }
+
+    .QuestionTitle,
+    .InsightTitle{
+        font-size:24px;
+    }
+
+    .ContinueButton{
+        width:100%;
+        padding:16px 24px;
+    }
+}

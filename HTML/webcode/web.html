@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<header>
+    <title>
+        MOCK INTERVIEW ANALYZER
+    </title>
+    <link rel="icon" href="/resources/media/brain.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/HTML/styles/styles.css">   
+    <link rel="stylesheet" href="/HTML/styles/background.css">
+</header>
+<body>
+    <canvas id="StarCanvas"></canvas>
+    <script type="module">
+        import {createStarField} from "/HTML/scripts/background.js";
+        createStarField("StarCanvas");
+    </script>
+    <div id="default-landing-page" >
+        <div class="userCreation">
+            <div class="LogoGrid">
+                <img class="Logo" src="/resources/media/brain.svg">
+                <p class="SiteName">MIA</p>
+            </div>
+            <div class="NavbarTitle">
+                Mock Interview Analyzer
+            </div>
+            <div class="AuthButtons">
+                <button class="js-loginButton">
+                    <img src="/resources/media/log-in.svg">
+                    <span class="login_text">Login</span>
+                </button>
+                <button class="js-SignInbutton">
+                    <img src="/resources/media/create.svg">
+                    <span class="SignIn_text">Sign Up</span>
+                </button>
+            </div>
+        </div>
+        <section class="HeroSection">
+            <div class="HeroContent">
+                <div class="HeroBadge">
+                    AI Mock Interview Platform
+                </div>
+                <h1 class="HeroTitle">
+                    Master Interviews
+                    <br>
+                    Not Memorization
+                </h1>
+                <p class="HeroDescription">
+                    Practice realistic technical interviews,
+                    receive detailed AI feedback,
+                    and build confidence before the real one.
+                </p>
+                <div class="HeroButtons">
+                    <button class="HeroStartButton">
+                        Start Mock Interview
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="FeatureSection">
+            <div class="FeatureCard">
+                <div class="IconWrapper">
+                    <img src="/resources/media/mic-vocal.svg" class="FeatureIcon">
+                </div>
+                <h3>Voice Interviews</h3>
+                <p>
+                    Answer interview questions naturally using your microphone.
+                </p>
+            </div>
+            <div class="FeatureCard">
+                <div class="IconWrapper">
+                    <img src="/resources/media/brain-circuit.svg" class="FeatureIcon">
+                </div>
+                <h3>AI Evaluation</h3>
+                <p>
+                    Receive detailed technical and communication feedback.
+                </p>
+            </div>
+            <div class="FeatureCard">
+                <div class="IconWrapper">
+                    <img src="/resources/media/chart-no-axes-combined.svg" class="FeatureIcon">
+                </div>
+                <h3>Progress Tracking</h3>
+                <p>
+                    Track mock interviews and monitor your improvement over time.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="/HTML/scripts/landingpage.js"></script>
