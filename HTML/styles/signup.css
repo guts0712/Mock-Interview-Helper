@@ -188,7 +188,7 @@
     font-size: 10px;
     color: #790101;
 }
-#SigninEmailError, #SigninEmailNullError, #SigninPassNullError, #SigninNameNullError{
+#SigninEmailError, #SigninEmailNullError, #SigninPassNullError, #SigninNameNullError, #LoginNamelNullError{
     display: flex;
     flex-direction: row;
     align-items: center;
