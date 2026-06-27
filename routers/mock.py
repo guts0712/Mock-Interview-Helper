@@ -15,7 +15,7 @@ Job = {
 }
 
 
-model_size = "small"
+model_size = "base"
 model = WhisperModel(model_size, device="cpu", compute_type="int8")
 
 
