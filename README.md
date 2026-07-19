@@ -23,7 +23,7 @@ An end-to-end AI-powered interview platform built using FastAPI, PostgreSQL, Whi
 - PostgreSQL Database
 - Responsive UI
 
-
+---
 
 ## 🛠 Tech Stack
 
@@ -47,7 +47,7 @@ AI
 Deployment
 - Railway
 
-
+---
 
 ## 📸 Screenshots
 
@@ -90,6 +90,7 @@ Deployment
 <img width="1279" height="799" alt="image" src="https://github.com/user-attachments/assets/ca844d84-09ed-4e44-a8e9-b503729fe1ca" />
 <img width="1279" height="799" alt="image" src="https://github.com/user-attachments/assets/3856439d-017b-4391-9cdf-915959a17c89" />
 
+---
 
 ## 🧠 How it Works
 
@@ -105,6 +106,7 @@ Deployment
    - overall score
    - detailed feedback
 
+---
 
 ## Installation
 
@@ -114,6 +116,7 @@ pip install -r requirements.txt
 
 uvicorn main:app --reload
 
+---
 
 ## Future Improvements
 
@@ -123,10 +126,14 @@ uvicorn main:app --reload
 - Better analytics
 - More interview domains
 
+---
+
 ## Live Demo
 https://mock-interview-helper-production.up.railway.app
 
 The application is deployed periodically for demonstrations. If the live link is unavailable, clone the repository and follow the installation steps below.
+
+---
 
 ## Author
 
