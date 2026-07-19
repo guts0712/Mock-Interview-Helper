@@ -10,7 +10,7 @@ An end-to-end AI-powered interview platform built using FastAPI, PostgreSQL, Whi
 ![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
 ![Whisper](https://img.shields.io/badge/Whisper-Speech--to--Text-red)
 
-
+---
 
 ## 🚀 Features
 
@@ -123,7 +123,10 @@ uvicorn main:app --reload
 - Better analytics
 - More interview domains
 
+## Live Demo
+https://mock-interview-helper-production.up.railway.app
 
+The application is deployed periodically for demonstrations. If the live link is unavailable, clone the repository and follow the installation steps below.
 
 ## Author
 
